@@ -48,7 +48,7 @@ void secante(double c[], double a, double b, unsigned int Nmax, double e1, doubl
 
     for(k = 1; !(fabs(b - a) < e1 && fabs(funcao(c, b)) < e2) && k <= Nmax; k++)
     {
-        x = b - funcao(c, b) / (funcao(c, b) - funcao(c, a)) * (b - a);
+        x = (a * funcao(c, b) - b * funcao(c, a)) / (funcao(c, b) - funcao(c, a));
 
         a = b;
         b = x;
